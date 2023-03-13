@@ -61,7 +61,7 @@ class TimeScaleDraw : public QwtScaleDraw
     QDateTime dt = QDateTime::fromMSecsSinceEpoch((qint64)(v * 1000));
     if (dt.date().year() == 1970 && dt.date().month() == 1 && dt.date().day() == 1)
     {
-      return dt.toString("hh:mm:ss.z");
+      return QString::number(v);
     }
     return dt.toString("hh:mm:ss.z\nyyyy MMM dd");
   }

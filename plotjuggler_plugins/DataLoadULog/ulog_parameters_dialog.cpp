@@ -47,7 +47,7 @@ ULogParametersDialog::ULogParametersDialog(const ULogParser& parser, QWidget* pa
   row = 0;
   for (const auto& log_msg : parser.getLogs())
   {
-    QString time = QString::number(0.001 * double(log_msg.timestamp / 1000), 'f', 2);
+    QString time = QString::number(log_msg.timestamp / 1000000.0, 'f', 6);
     table_logs->setItem(row, 0, new QTableWidgetItem(time));
 
     switch (log_msg.level)
