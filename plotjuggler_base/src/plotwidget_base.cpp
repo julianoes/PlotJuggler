@@ -147,7 +147,7 @@ public:
 
   std::list<CurveInfo> curve_list;
 
-  CurveStyle curve_style = LINES;
+  CurveStyle curve_style = LINES_AND_DOTS;
 
   bool zoom_enabled = true;
 
